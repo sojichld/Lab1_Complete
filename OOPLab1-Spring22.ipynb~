@@ -1,0 +1,149 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Name:\n",
+    "Email:\n",
+    "\n",
+    "\n",
+    "## Part 1 - Sequence Class\n",
+    "\n",
+    "Write a Sequence class. In the __init__ method, you should initialized one attribute, a String that represents a DNA Sequence\n",
+    "This class should also have the following magic methods we discussed in class yesterday:\n",
+    "\n",
+    "- __repr__ and __str__\n",
+    "- __eq__ and __lt__ (then use the decorator I demonstrated)\n",
+    "\n",
+    "It is up to you to decide how these should be implemented. For instance, what criteria do you think makes the most sense for saying two sequences are equal to one another? What criteria for one sequence to be considered \"less than\" another?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#sequence class goes here\n",
+    "from functools import total_ordering"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Use this cell for testing your Sequence class. Show us what tests you ran to confirm your methods worked correctly"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Part 2 - SequenceRecord Class\n",
+    "\n",
+    "Write a class called Sequence Record. This class should have two attributes:\n",
+    "\n",
+    "- A label/title (something that describe the source of the sequence, like the contents of a header line in a FASTA file)\n",
+    "- and a Sequence object \n",
+    "\n",
+    "Your initializer should attempt to confirm that the second attribute is, in fact, a Sequence object. Consider the following code and how it could be applied here\n",
+    "\n",
+    "```\n",
+    ">>> s = \"hello\"\n",
+    ">>> type(s) == str\n",
+    "True \n",
+    "```\n",
+    "\n",
+    "You should also, at minimum, add a __str__ and __repr__ method."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# SequenceRecord class goes here"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Use this cell to test your SequenceRecord class"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Part 3 - Parsing using your new classes\n",
+    "\n",
+    "Build yourself a test FASTA file with approx 3 simple records. Read in this file, and use it contents to create a SequenceRecords for each record in the file. \n",
+    "\n",
+    "- Please note this process is identical to what we did previously with FASTA parsing, only before we used a dictionary where the key stored the header info, and the value stored the sequence info. Now, our SequenceRecord object holds BOTH pieces.\n",
+    "\n",
+    "Be sure to confirm your SequenceRecord objects hold the correct information.\n",
+    "\n",
+    "For extra credit, write your parser as a generator."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Write your parser and testing code here"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Part 4 - OOP Lab Part 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Add the following to your Sequence class:\n",
+    "\n",
+    " \n",
+    "\n",
+    "- the __len__() magic function  -> return the length of the object  \n",
+    "- the __add__() magic function -> returns the result of two Sequence objects being added to one another (what should this be?)\n",
+    " \n",
+    "\n",
+    "Add one method of your choice to Sequence that is something you think a Sequence can/should do. Think about things we've done with sequences, and add one of these as a method to your Sequence Class."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
